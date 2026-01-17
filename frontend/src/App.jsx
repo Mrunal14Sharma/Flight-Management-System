@@ -9,24 +9,25 @@ import Profile from './pages/Profile'
 import NotFound from './pages/NotFound'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import { ROUTES } from './constants/route'
 
 function App() {
 
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path='/'element={<Layout/>}>
-      <Route index element={<Home/>} />
-      <Route path='flights' element={<Flights/>} />
-      <Route path='flight:/id' element={<FlightDetails/>} />
-      <Route path='bookings' element={<Bookings/>} />
-      <Route path='profile' element={<Profile/>} />
-      </Route>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path={ROUTES.FLIGHTS} element={<Flights />} />
+          <Route path={ROUTES.FLIGHT_DETAILS} element={<FlightDetails />} />
+          <Route path={ROUTES.BOOKINGS} element={<Bookings />} />
+          <Route path={ROUTES.PROFILE} element={<Profile />} />
+        </Route>
 
-      <Route path='/login' element={<Login/>} />
-      <Route path='/signup' element={<Signup/>} />
-      <Route path='*' element={<NotFound/>} />
-    </Routes>
+        <Route path={ROUTES.LOGIN} element={<Login />} />
+        <Route path={ROUTES.SIGNUP} element={<Signup />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   )
 }
