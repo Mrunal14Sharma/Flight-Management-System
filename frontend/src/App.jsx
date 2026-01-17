@@ -7,8 +7,8 @@ import FlightDetails from './pages/FlightDetails'
 import Bookings from './pages/Bookings'
 import Profile from './pages/Profile'
 import NotFound from './pages/NotFound'
-import Login from './pages/Login'
-import Signup from './pages/Signup'
+import Login from './pages/auth/Login'
+import Signup from './pages/auth/Signup'
 import { ROUTES } from './constants/route'
 
 function App() {
