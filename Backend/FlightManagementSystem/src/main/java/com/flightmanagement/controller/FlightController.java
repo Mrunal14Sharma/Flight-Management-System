@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.flightmanagement.dto.FlightDTO;
 import com.flightmanagement.entity.Flight;
 import com.flightmanagement.service.FlightService;
 
@@ -20,7 +21,7 @@ public class FlightController {
     }
     
     @GetMapping
-    public List<Flight> getAllFlights(){
+    public List<FlightDTO> getAllFlights(){
     	return flightService.getAllFlights();
     }
 

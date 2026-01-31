@@ -2,10 +2,11 @@ package com.flightmanagement.service;
 
 import java.util.List;
 
+import com.flightmanagement.dto.FlightDTO;
 import com.flightmanagement.entity.Flight;
 
 public interface FlightService {
 
-	List<Flight> getAllFlights();
+	List<FlightDTO> getAllFlights();
 	
 }

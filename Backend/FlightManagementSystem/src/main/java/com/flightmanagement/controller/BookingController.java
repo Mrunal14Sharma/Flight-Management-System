@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.flightmanagement.dto.BookingDTO;
 import com.flightmanagement.entity.Booking;
 import com.flightmanagement.service.BookingService;
 
@@ -20,7 +21,7 @@ public class BookingController {
     }
     
     @GetMapping
-    public List<Booking> getAllBookings(){
+    public List<BookingDTO> getAllBookings(){
     	return bookingService.getAllBookings();
     }
 

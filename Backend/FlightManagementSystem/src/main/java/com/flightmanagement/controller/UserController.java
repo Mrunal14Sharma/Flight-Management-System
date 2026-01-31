@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.flightmanagement.dto.UserDTO;
 import com.flightmanagement.entity.User;
 import com.flightmanagement.service.UserService;
 
@@ -20,7 +21,7 @@ public class UserController {
     }
     
     @GetMapping
-    public List<User> getAllUsers(){
+    public List<UserDTO> getAllUsers(){
     	return userService.getAllUsers();
     }
 	
